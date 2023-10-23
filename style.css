@@ -1,0 +1,861 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.main {
+        background-image: url(Képek/logo3.webp);
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon{
+    width: 100px;
+    float: left;
+    height: 70px;
+}
+.icon img {
+    max-width: 100%; /* A kép maximális szélessége */
+    margin-right: 0%; /* Jobbra távolság a logótól (választható) */
+    vertical-align: auto; /* Kép középre igazítása a szöveggel */
+}
+.logo{
+    color: #fff;
+    font-size: 17px;
+    font-family: 'Lucida Handwriting';
+    padding-left: 20px;
+    float: left;
+    padding-top: 10px;
+    margin-top: 5px
+}
+.menu {
+    position: absolute;
+    left: 10%;
+}
+
+ul{
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul li{
+    list-style: none;
+    margin-left: 25px;
+    margin-right: 5px; /* Adj hozzá térközt a jobb oldalon */
+    margin-top: 27px;
+    font-size: 19px;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #0a090a;
+    font-family: 'Lucida Handwriting';
+    font-weight: bold;
+    padding: 3px 3px;
+    transition: 0.4s ease-in-out;
+    position: relative;
+    width: 400px;
+    height: 200px;
+}
+
+ul li a:hover{
+    color: #ccc;
+}
+.search{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.srch{
+    font-family: 'Times New Roman';
+    width: 200px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid #0a090a;
+    margin-top: 13px;
+    color: #fff;
+    border-right: none;
+    font-size: 16px;
+    float: left;
+    padding: 10px;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.btn{
+    width: 100px;
+    height: 40px;
+    background: #0a090a;
+    border: 2px solid #0a090a;
+    margin-top: 13px;
+    color: #fff;
+    font-size: 15px;
+    border-bottom-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    transition: 0.2s ease;
+    cursor: pointer;
+}
+.btn:hover{
+    color: #ff7200;
+}
+
+.btn:focus{
+    outline: none;
+}
+
+.srch:focus{
+    outline: none;
+}
+
+.content{
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    color: #fff;
+    position: relative;
+}
+
+.content .par{
+    padding-left: 20px;
+    padding-bottom: 25px;
+    font-family: Arial;
+    letter-spacing: 1.2px;
+    line-height: 30px;
+}
+
+.content h1{
+    font-family: solid 'Times New Roman';
+    font-size: 50px;
+    padding-left: 20px;
+    margin-top: 9%;
+    letter-spacing: 2px;
+  
+}
+
+.content .cn{
+    width: 200px;
+    height: 50px;
+    background: transparent;
+    border: none;
+    margin-bottom: 10px;
+    margin-left: 20px;
+    font-size: 18px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+.content .cn:hover {
+    color: #ff7200;
+}
+.content .cn a {
+    text-decoration: underline;
+    color: #000;
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-size: 25px; /* Módosított betűméret */
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    
+}
+
+.cn:hover{
+    background-color: transparent;
+    color: #ccc;
+}
+
+.content span{
+    color: #ff7200;
+    font-size: 65px
+}
+
+.form_s{
+    width: 250px;
+    height: 380px;
+    background: transparent;
+    position: absolute;
+    top: -20px;
+    left: 80%;
+    transform: translate(0%,-5%);
+    border-radius: 10px;
+    padding: 25px;
+}
+
+.form_s h2{
+    width: 190px;
+    font-family: sans-serif;
+    text-align: center;
+    font-size: 15px;
+    background-color: black;
+    border-radius: 10px;
+    border-bottom: 1px solid #ff7200;
+    margin: 2px;
+    padding: 8px;
+}
+.form_s h2:hover{
+    background: #fff;
+    color: black;
+}
+.form_s input{
+    width: 190px;
+    height: 35px;
+    background: transparent;
+    border-bottom: 1px solid #ff7200;
+    border-top: none;
+    border-right: none;
+    border-left: none;
+    font-size: 15px;
+    letter-spacing: 1px;
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+
+.form_s input:focus{
+    outline: none;
+   
+}
+
+::placeholder{
+    color: black;
+    font-family: Arial;
+}
+
+.btnn{
+    width: 190px;
+    height: 40px;
+    background: black;
+    border: none;
+    margin-top: 30px;
+    font-size: 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: #fff;
+    transition: 0.4s ease;
+      font-weight: bold;
+}
+.btnn:hover{
+    background: white;
+    color: black;
+}
+.btnn a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+.form_s.link{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+    padding-top: 20px;
+    text-align: center;
+}
+.form_s .link a{
+    text-decoration: none;
+    color: #ff7200;
+}
+.liw{
+    padding-top: 15px;
+    padding-bottom: 10px;
+    text-align: center;
+}
+.icons a{
+    text-decoration: none;
+    color: #fff;
+}
+.icons ion-icon{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+    padding-left: 14px;
+    padding-top: 5px;
+    transition: 0.3s ease;
+}
+.icons ion-icon:hover{
+    color: white;
+}
+/*ORVOSAINK css*/
+/* Alap stílus az oldalhoz */
+.doctor_b{
+    background: url(Képek/hatter9.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 108vh;
+
+}
+.alap-orvosok {
+    font-family: 'sans-serif';
+    margin: 10px;
+    padding: 0;
+    background-color: #692f2f;
+}
+
+/* Cím stílusa */
+.cimsor1 {
+    background-color: #3498db;
+    color: white;
+    padding: 15px;
+    font-size: 25px;
+    text-align: center;
+}
+
+/* Konténer stílusa a tartalom középre igazításához */
+.container {
+    font-family: 'sans-serif';
+    width: 80%;
+    margin: 10px;
+    padding: 20px;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Alap orvosok lista stílusa */
+#alap-orvosok {
+position: center;
+width: 30%;
+padding: 5px;    
+}
+
+#alap-orvosok ol{
+    margin: 0;
+    padding: 20px;
+    counter-reset: section;
+    font-size: 20px;
+}
+ #alap-orvosok ol li::before  {
+        margin-bottom: 5px;
+        list-style: none;
+       
+}     
+.cimsor2 {
+    margin-top: 20px; /* Opcionális távolság az űrlap és a cím között */
+    font-weight: bold;
+    font-family: 'sans-serif';
+    font-size: 25px;
+}
+
+/* Űrlap és gombok stílusai */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+}
+
+button {
+    background-color: #3498db;
+    color: white;
+    font-size: 25px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #2980b9;
+}
+
+/* Stílus a keresési eredményekhez */
+#orvos-lista {
+    position: relative;
+    top: -450px;
+    border: none;
+    padding: 5px;
+    background-color:transparent;
+    font-family: 'Courier New';
+    font-size: 25px bold;
+    margin: 5px;
+}
+#orvos-hozzaadas-form {
+    
+        position: absolute;
+        top: 90px; /* Adj meg a kívánt távolságot az oldal alsó részétől */
+        left: 130vh;
+        width: 110wh; /* Az oldal közepére igazítás */
+        padding: 0;
+    }
+.cimsor3{
+   
+        position: absolute;
+        right: 400px;
+        top:80px;
+        color:black;
+        font-size:25px;
+}
+
+/* Az input mezők szélességének beállítása */
+#nev,
+#szakma,
+#eletkor,
+#elerhetoseg{
+    position: relative;
+    bottom: 550px;
+    left: 450px;   
+    padding: 20px;
+    width: 180px;
+    margin: 20px;
+    height: 50px; /* 50% szélesség, így két elem elfér egy sorban */
+    border: 2px solid orange; /* Opcionális jobb oldali térköz a mezők között */
+}
+#hozzaadasGomb {
+border: none; /* Eltávolítja a gomb szegélyét */
+font-size: 20px;
+padding: 10px;
+border-radius: 10px; /* Kerekített sarok sugara (itt 10px példaként) */
+position: relative;
+bottom: 480px;
+right: 55px;  
+border: 2px solid black;
+}
+   #kereso {
+    width: 60%; /* Állítsd be a kereső mező szélességét */
+    max-width: 200px; /* Opcionális: Ha nem szeretnéd, hogy túl széles legyen */
+    height: 51px;
+    position: relative;
+    left: 10px;
+    bottom: 450px;
+    border: 2px solid orange;
+    font-size: 20px;
+}
+.error {
+    border: 2px solid red;
+}
+
+#keresesGomb {
+    position: relative;
+    left: 5px;
+    bottom: 447px;
+     width: 10%; /* Állítsd be a keresés gomb szélességét */
+     height: 50px; /* Opcionális: Ha nem szeretnéd, hogy túl széles legyen */
+     border: 2px solid black;
+ }
+.orvos_back {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 15px 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 25px; /* Itt elhagytam a "solid" értéket, mivel a font-size-hez nincs szükség rá. */
+    color:black;
+}
+.orvos_back:hover {
+    background-color: transparent;
+    color: black;
+}
+
+.Időpontfoglalás {
+    background: url(Képek/logo2.webp);
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.Idopontfoglalas_background {
+    font-size: 25px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px; /* Válaszd meg a megfelelő szélességet */
+    margin: 0 auto; /* Középre igazítás */
+    border: 1px solid black; /* Fekete keret az űrlap körül */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Árnyék a jobb olvashatóság érdekében */
+
+}
+.uniform-width {
+    width: 90%; /* VÃƒÂ¡laszd meg a kÃƒÂ­vÃƒÂ¡nt szÃƒÂ©lessÃƒÂ©get */
+    height: 30px;
+    padding: 20px;
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 10px;
+
+  
+}
+/* Az Å±rlap elemek stÃ­lusa */
+/* Az Å±rlap elemek stÃ­lusa */
+form label {
+    display: block;
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 25px;
+    padding: 0;
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 100%;
+    height: 40px;
+    padding: 15px;
+    margin-left: 15px;
+    border: 2px solid black;    
+    border-radius: 10px;
+    font-size: 25px; /* PÃ©lda: 25px betÅ±mÃ©ret */
+}
+
+form input[type="text"],
+form input[type="date"],
+form select {
+    width: 90%;
+    height: 40px;
+    padding: 15px;
+    margin-top: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    font-size: 20px; /* Példa: 25px betűméret */
+}
+
+form input[type="text"]:invalid, /* Ez az érvénytelen mezőkre vonatkozik */
+form input[type="date"]:invalid,
+form select:invalid {
+    border: 2px solid red; /* Ha az adat érvénytelen, akkor piros keret */
+    font-size: 25px; /* Példa: 25px betűméret */
+}
+label[for="elolvastam"] {
+    font-size: 20px; /* Példa: 25px betűméret */
+    padding:0px;
+    position:relative;
+    left:20px;
+}
+
+form input[type="radio"] {
+    position: relative;
+    left: -5px;
+    top:10px;
+    
+    margin-left: 15px;
+    border: 2px solid #007bff; /* Példa: kék keret a kiválasztott gomb körül */
+    transform: scale(1.5); /* A rádiógomb méretének növelése, 1.5x-es méretre */
+
+}
+/* A gomb stílusa */
+#foglal-gomb {
+    display: block;
+    text-align: center;
+    background-color: black;
+    color: #ccc;
+    padding: 10px 0; /* Vízszintes irányú padding, függőleges maradt 10px */
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-left: 15px;
+    width: 90%; /* Az auto érték miatt a gomb szélessége automatikusan illeszkedik a tartalomhoz */
+    height: 40px;
+    font-size: 20px; /* Példa: 20px-es betűméret */
+}    
+
+#foglal-gomb:hover {
+    background-color: #ccc;
+    color: #000;
+}
+/* Vissza gomb stílusa */
+.back_button_2 {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    text-size-adjust: 25px;
+    color: black; /* Szöveg fehérre állítása */
+    padding: 5px 10px; /* Példa: rövidebb padding beállítása */
+    border-radius: 5px;
+    position: absolute; /* A pozíció abszolút módban van beállítva */
+    top: 10px; /* Felülről 10 pixel távolság a tetejétől */
+    left: 10px; /* Balról 10 pixel távolság a bal oldalától */
+    background-color: transparent; /* Háttérszín átlátszóvá tétele */
+    transition: background-color 0.3s; /* Áttűnést hozzáadni a háttérszínhez */
+}
+
+.back_button_2:hover {
+    background-color: transparent;
+    color: #ccc; /* Narancssárga háttérszín a hover eseményre */
+}
+/* betegellatas*/
+/* Alapértelmezett lista stílus */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black; /* Betűszín fekete */
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 10px 10px 5px 1px; /* Első három érték a felső, jobb, alsó margók, negyedik az új bal margó */
+    text-decoration: none;
+    font-size: 15px;
+    text-align: center; /* Balra igazítás */
+    transition: background-color 0.3s;
+}
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*Animacio*/
+.logo {
+    animation: pulse 2s infinite;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+ /* Háttérkép stílusának beállítása */
+/* Folyamatosan animált szöveg */
+
+.content h1, .content .par {
+    overflow: hidden;
+    white-space: nowrap;
+    animation: reveal 3s steps(30, end) infinite;
+}
+
+@keyframes reveal {
+    0% {
+        width: 0;
+    }
+    100% {
+        width: 100%;
+    }
+}
+/* Stílus az alap táblázathoz */
+.hirek_service {
+    background: url(Képek/kep2.jpg);
+    position: relative;
+    bottom: -50px; 
+     background-repeat: no-repeat;
+    background-size: cover;
+    padding: 10px;
+    right: 1090px;
+    width: 1400px;
+    height: 100px;
+}
+
+
+/* Stílus a táblázat cellákhoz (service elemekhez) */
+.hirek_service td {
+    padding: 0; /* Cellák belső margója */
+    position: relative;
+    top: 50px;
+    left: 190px;
+    width: 1000px;
+    height: 80px;
+    margin-bottom: 50px; /* Például hozzáad 20px margin-t a <button> alá */
+    border: 2px solid black; /* 1px vastag szegély a cellák körül */
+    text-align: center; /* Szöveg középre igazítása a cellában */
+    background: linear-gradient(to top, rgba(59, 57, 57, 0.5)50%,rgba(59, 52, 52, 0.5)50%);
+    background-size: cover;
+   
+}
+
+/* Stílus a service osztályhoz */
+.service {
+    text-align: center; /* Középre igazítás a szöveg és a kép számára */
+    padding: 20px;
+    margin: 25px;
+    font-size: 20px;
+    font-style: italic;
+    border-radius: 10px;   /* Lekerekített sarkok */
+    display: flex; /* Flexbox konténerként kezeljük a .service elemet */
+    justify-content: space-between; /* Az elemek egyenletesen helyezkedjenek el a sorban */
+    
+}
+
+/* Stílus a linkekhez */
+.service a {
+    text-decoration: none;
+    font-weight: bold;
+    font-family: 'Lucida Handwriting';
+    transition: background-color 0.3s; /* Áttűnési hatás a háttér színének változásához */
+    padding: 30px 30px; /* Növelt magasság */
+    border-radius: 20px;   /* Lekerekített sarkok */
+    font-size: 15px;
+}
+
+.service a:hover {
+    color: black; /* Szöveg fehér lesz az egér fölött */
+}
+/* A h2 szövegének fekete színné tétele */
+.service h2 {
+    font-size: 20px;
+    font-style:italic;
+    background-color: transparent;
+    padding: 10px 20px;
+    border: none;
+    color: #000; /* Fekete szövegszín */
+}
+.service h2:hover {
+    background-color: transparent; /* vagy az eredeti háttérszínre állítsa vissza */
+}
+
+/* A leírás szövegének fehér színné tétele */
+.service .description {
+    font-style: italic;
+    font-weight: bolder;
+    padding: 10px 20px;
+    color: black; /* Fehér szövegszín */
+    size: 20px;
+}
+.numbers h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: none;
+    background-position-x: left;
+    font-size: 30px; /* Betűméret */
+    font-style:italic;
+    color: #273330; /* Szövegszín */
+    padding: 10px; /* Belső margó a cím körül */
+    position: relative;
+    top: 58px;
+    right: 1047px;
+    width: 1300px;
+}
+.surgossegiLeiras{
+    font-size: 20px;
+}
+.searcher {
+   position: relative;
+   right: 100px;
+}
+.searcher::placeholder {
+    font-style: italic;
+}
+/*history*/
+.history{
+        background-image: url('Képek/history1.jpg'), url('Képek/history2.jpg'), url('Képek/history3.JPG'), url('Képek/history4.JPG'), url('Képek/history5.jpg'), url('Képek/history6.jpg');
+        background-size: cover;
+        background-repeat: no-repeat, no-repeat, no-repeat;
+        background-position: center center, center center, center center;
+        animation: changeBackground 15s linear infinite; /* Animáció a háttérképek közötti váltáshoz */
+        height: 250vh;
+    }
+    
+    @keyframes changeBackground {
+        0% {
+            background-image: url('Képek/history1.jpg'), url('Képek/history2.jpg'), url('Képek/history3.JPG'), url('Képek/history4.JPG'), url('Képek/history5.jpg');
+        }
+        33.33% {
+            background-image: url('Képek/history2.jpg'), url('Képek/history4.JPG'), url('Képek/history1.jpg'), url('Képek/history6.jpg'), url('Képek/history3.JPG');
+        }
+        66.66% {
+            background-image: url('Képek/history3.JPG'), url('Képek/history6.jpg'), url('Képek/history5.jpg'), url('Képek/history1.jpg'), url('Képek/history2.jpg');
+        }
+        100% {
+            background-image: url('Képek/history6.jpg'), url('Képek/history5.jpg'), url('Képek/history4.JPG'), url('Képek/history3.JPG'), url('Képek/history1.jpg');
+        }
+
+}
+ul.news li {
+    display: block;
+    margin-bottom: 10px; /* Opcionális térköz a hírek között */
+}
+.news h2, h3 {
+    display: block;
+    margin-bottom: 10px; /* Opcionális térköz a hírek között */
+    color: aqua;
+    position: relative;
+    right: 109px;
+}
+.mutat-button {
+background: none;
+    color: #167256;
+    font-weight: bold;
+    font-size: 23px;
+    font-family: 'Lucida Handwriting';
+    padding: 20px 20px;
+    border: none;
+    cursor: pointer;
+    margin: 5px;
+    display: inline-block; /* Ezt a sort adjuk hozzá */
+    position: relative;
+    top: 150px;
+    overflow: hidden;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-bottom: 50px; /* Például hozzáad 20px margin-t a <button> alá */
+}
+.mutat-button pulzalo {
+    margin-bottom: 60px; /* Például hozzáad 20px margin-t a <button> alá */
+}
+.conte h2 {
+    display: flex;
+    font-size: 40px;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lucida Handwriting';
+    color: #167256;
+    position: relative;
+    top: 100px;
+    margin-bottom: 60px; /* Elrendezési tér a cím és a leírás között */
+}
+.conte div {
+    /* Stílus tulajdonságok itt */
+    position: relative;
+    top: 80px;
+    font-size: 18px; /* például a szövegméret */
+    color: #ccc; /* például a szöveg színe */
+    line-height: 1.5;
+    font-style: italic; /* például a sortávolság */
+    font-weight: bold; /* Félkövér betűvastagság */
+    padding: 20px;
+    /* Egyéb stílus tulajdonságok */
+}
+.mutat-button:hover {
+    color: black;
+    background-color: transparent;
+    transform: translateX(10px);
+}
+.mutat-button span.arrow-left {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    transform-origin: center left;
+}
+span.arrow-right {
+    font-size: 30px; /* Itt a megfelelő méretet választhatod ki */
+    color: #ff7200;
+    margin-left: 10px; /* Példa: 10px köztes terület a nyíl ikon (arrow) után */
+    margin-right: 10px; /* Példa: 10px köztes terület a nyíl ikon (arrow) előtt */
+}
+.mutat-button:hover span.arrow-left {
+    transform: translateX(-20px);
+}
+
+.history_back {
+    position: absolute;
+    top: 0px;
+    left: 0;
+    padding: 15px 15px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-weight: bold;
+    font-size: 25px; /* Itt elhagytam a "solid" értéket, mivel a font-size-hez nincs szükség rá. */
+    color:white;
+}
+.history_back:hover {
+    color: black;
+}
+#centered-heading {
+    text-align: center;
+    color: #167256;
+    font-size: 25px;
+    margin-bottom: 20px; /* Például hozzáad 20px margin-t a <h3> alá */
+
+  }
+  #centered-heading p{
+    font-size: 25px;
+    margin-bottom: 20px; /* Például hozzáad 20px margin-t a <h3> alá */
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Időpontfoglalás</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+</head>
+<body>
+    <div class="Időpontfoglalás">
+    <div class="Idopontfoglalas_background">
+        <form id="foglalas-form">
+            <label for="Nev">Név:</label>
+            <input type="text" id="Nev" name="nev" pattern="[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű ]+" required><br>
+
+            <label for="szuletesi_ido">Születési idő:</label>
+            <input type="date" id="szuletesi_ido" name="szuletesi_ido" pattern="[0-9]+" required><br>
+
+            <label for="id">Telefonszám:</label>
+            <input type="text" id="Telefonszám" name="Telefonszám" pattern="[0-9]+" required><br>
+
+            <label for="Email">Email:</label>
+            <input type="text" id="Email" name="Email" pattern="[A-Za-zÁÉÍÓÖŐÚÜŰáéíóöőúüű ]+" required>
+
+            <label for="osztaly">Válasszon osztályt:</label>
+            <select id="osztaly" name="osztaly" class="uniform-width" required>
+                <option value="" disabled selected>Válasszon osztályt...</option>
+                <option value="Kardiológia">Kardiológia</option>
+                <option value="Bőrgyógyászat">Bőrgyógyászat</option>
+                <option value="Fogászat">Fogászat</option>
+                <option value="Belgyógyászat">Belgyógyászat</option>
+                <option value="Fül-orr-gégészet">Fül-orr-gégészet</option>
+            </select>
+            
+
+            <input type="radio" id="elolvastam" name="ertesites" value="elolvastam" required>
+            <label for="elolvastam">Elolvastam az időponttal kapcsolatos tudnivalókat</label>
+
+            <button type="submit" id="foglal-gomb" onclick="validateForm()">Foglalás</button>
+        </form>
+        <a href="../index.html" class="back_button_2" onclick="goBack()">Vissza</a>
+    </div>
+</body>
+</html>

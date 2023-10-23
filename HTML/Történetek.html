@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Történetek</title>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<style>
+    @keyframes pulse {
+        0% {
+            transform: scale(1);
+        }
+
+        50% {
+            transform: scale(1.1);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    /* Alkalmazzuk az animációt a gombra */
+    .mutat-button:hover {
+        animation: pulse 0.5s infinite;
+        /* A pulzálás végtelen lesz */
+    }
+</style>
+
+<body>
+    <div class="history">
+        <header>
+            <a href="../index.html" class="history_back">Vissza</a>
+        </header>
+        <div class="conte">
+            <h2>"Kórházak története"</h2>
+            <div>
+                A kórházak története az ókorban kezdődött a görög, a Római Birodalom és az indiai szubkontinens
+                kórházaival, először az ókori Görögország Aszklepiusz templomaiban és az ókori Rómában katonai
+                kórházakkal. A 4. század végére következett be a "második orvosi forradalom" a keleti Bizánci
+                Birodalomban, amikor Baziliszka, Cesareai Szent Baziliszka alapította meg az első keresztény kórházat.
+                A kórházak tovább fejlődtek és fejlődtek a bizánci, középkori európai és iszlám társadalmakban az 5. és
+                a 15. század között. Az európai felfedezések kórházakat hoztak Észak-Amerikába, Afrikába és Ázsiába. A
+                1123-ban Londonban alapított Szent Bertalan kórház ma is a legrégebben működő kórháznak számít.
+                A 19. században Nyugati misszionáriusok hoztak létre kórházakat Kínában és Japánban. A 20. század végén
+                és a 21. században kórházakat összefogó hálózatok és állami egészségügyi szervezetek jöttek létre.
+            </div>
+            <button class="mutat-button pulzalo" data-section="Görögország">
+                Görögország
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Rómában">
+                Rómában
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button" data-section="Észak-Amerikába">
+                Észak-Amerikába
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Észak-Afrikában">
+                Észak-Afrikában
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Ázsiában">
+                Ázsiában
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Londonban">
+                Londonban
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Kínában">
+                Kínában
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Japánban">
+                Japánban
+                <span class="arrow-right">»</span>
+            </button>
+            <button class="mutat-button pulzalo" data-section="Közel-Keleten">
+                Közel-Keleten
+                <span class="arrow-right">»</span>
+            </button>
+
+            <div class="szoveges-resz" style="display: none;">
+                <div class="section Görögország">
+                    <h3 id="centered-heading">Görögországi kórházak</h3>
+                    <p>In ancient Greece, temples dedicated to the healer-god Asclepius, known as Asclepieia (Ancient
+                        Greek: Ἀσκληπιεῖα, sing. Asclepieion, Ἀσκληπιεῖον), functioned as centres of medical advice,
+                        prognosis, and healing.[9] Asclepeia provided carefully controlled spaces conducive to healing
+                        and fulfilled several of the requirements of institutions created for healing.[9] Under his
+                        Roman name Æsculapius, he was provided with a temple (291 BCE) on an island in the Tiber in Rome
+                        (the Tiber Island), where similar rites were performed.[10].
+                        At these shrines, patients would enter a dream-like state of induced sleep known as enkoimesis
+                        (ἐγκοίμησις) not unlike anesthesia, in which they either received guidance from the deity in a
+                        dream.[11] Asclepeia provided carefully controlled spaces conducive to healing and fulfilled
+                        several of the requirements of institutions created for healing.[9] In the Asclepieion of
+                        Epidaurus, three large marble boards dated to 350 BCE preserve the names, case histories,
+                        complaints, and cures of about 70 patients who came to the temple with a problem and shed it
+                        there. Some of the surgical cures listed, such as the opening of an abdominal abscess or the
+                        removal of traumatic foreign material, are realistic enough to have taken place, but with the
+                        patient in a state of enkoimesis induced with the help of soporific substances such as
+                        opium.[11] The worship of Asclepius was adopted by the Romans.
+
+                        The Athenian Navy had a ship named Therapia, and the Roman Navy had a ship named Aesculapius,
+                        their names indicating that they may have been hospital ships.</p>
+                </div>
+                <div class="section Rómában">
+                    <h3 id="centered-heading">Római kórházak</h3>
+                    <p>The Romans constructed buildings called valetudinaria for the care of sick slaves, gladiators,
+                        and soldiers around 100 BCE, and many were identified by later archeology. While their existence
+                        is considered proven, there is some doubt as to whether they were as widespread as was once
+                        thought, as many were identified only according to the layout of building remains, and not by
+                        means of surviving records or finds of medical tools.[15]
+
+                        The declaration of Christianity as an accepted religion in the Roman Empire drove an expansion
+                        of the provision of care. Following First Council of Nicaea in 325 CE construction of a hospital
+                        in every cathedral town was begun. Among the earliest were those built by the physician Saint
+                        Sampson in Constantinople and by Basil of Caesarea in modern-day Turkey towards the end of the
+                        4th century. By the beginning of the 5th century, the hospital had already become ubiquitous
+                        throughout the Christian east in the Byzantine world,[3] this being a dramatic shift from the
+                        pre-Christian era of the Roman Empire where no civilian hospitals existed.[1] Called the
+                        "Basilias", the latter resembled a city and included housing for doctors and nurses and separate
+                        buildings for various classes of patients.[16] There was a separate section for lepers.[17] Some
+                        hospitals maintained libraries and training programs, and doctors compiled their medical and
+                        pharmacological studies in manuscripts. Thus in-patient medical care in the sense of what we
+                        today consider a hospital, was an invention driven by Christian mercy and Byzantine
+                        innovation.[18] Byzantine hospital staff included the Chief Physician (archiatroi), professional
+                        nurses (hypourgoi) and the orderlies (hyperetai). By the twelfth century, Constantinople had two
+                        well-organized hospitals, staffed by doctors who were both male and female. Facilities included
+                        systematic treatment procedures and specialized wards for various diseases</p>
+                </div>
+                <div class="section Észak-Amerikába">
+                    <h3 id="centered-heading">Észak-Amerikai kórházak</h3>
+                    <p>The first hospital founded in the Americas was the Hospital San Nicolás de Bari in Santo Domingo,
+                        Distrito Nacional Dominican Republic. Fray Nicolás de Ovando, Spanish governor and colonial
+                        administrator from 1502 to 1509, authorized its construction on December 29, 1503. This hospital
+                        apparently incorporated a church. The first phase of its construction was completed in 1519, and
+                        it was rebuilt in 1552.[103] Abandoned in the mid-18th century, the hospital now lies in ruins
+                        near the Basilica Cathedral of Santa María la Menor in Santo Domingo.
+
+                        Conquistador Hernán Cortés founded the two earliest hospitals in North America: the Immaculate
+                        Conception Hospital and the Saint Lazarus Hospital. The oldest was the Immaculate Conception,
+                        now the Hospital de Jesús Nazareno in Mexico City, founded in 1524 to care for the poor.[103]
+
+                        In Quebec, Catholics operated hospitals continuously from the 1640s; they attracted nuns from
+                        the provincial elite. Jeanne Mance (1606–73) founded Montreal's city's first hospital, the
+                        Hôtel-Dieu de Montréal, in 1645. In 1657 she recruited three sisters of the Religious
+                        Hospitallers of St. Joseph, and continued to direct operations of the hospital. The project,
+                        begun by the niece of Cardinal de Richelieu was granted a royal charter by King Louis XIII and
+                        staffed by a colonial physician, Robert Giffard de Moncel.[104] The General Hospital in Quebec
+                        City opened in 1692. They often handled malaria, dysentery, and respiratory sickness.</p>
+                </div>
+                <div class="section Észak-Afrikában">
+                    <h3 id="centered-heading">Észak-Afrikai kórházak</h3>
+                    <p>Conflicts and contestations arose between African traditional healers and the colonial healthcare
+                        providers over causation and therapeutic approaches to combat particular diseases. Coercive and
+                        racialized health interventions also characterized the colonial period, with sanitary
+                        segregation measures and criminalization of venereal diseases imposed on Africans.
+
+                        Chapter three examines interventions by the African states in the post-colonial period. It
+                        explores the resurgence of old diseases such as malaria, cholera, smallpox, and sleeping
+                        sickness and the resurfacing of traditional healing therapies. Traditional healers’ associations
+                        suppressed and segregated during the colonial period were now recognized, as evidenced by the
+                        reformation of the Association of Traditional Healers in Ghana in 1963. During the battle
+                        against HIV/AIDS traditional healers were given fundamental roles to play by the World Health
+                        Organization.
+                        The second part of the book examines a set of four disease case studies: HIV/AIDS, mental
+                        illness, tropical diseases and occupational lung diseases. Chapter four looks at HIV/AIDS. This
+                        disease had and continues to have a profound demographic impact on African countries, especially
+                        South Africa, Botswana, Zimbabwe and Lesotho. These places have the highest mortality and
+                        morbidity rates on the continent and among the highest across the across the globe.
+
+                        In chapter five, Lee examines African mental illness in a historical context, something that has
+                        generally been neglected by previous scholars. This chapter may be the weakest in the book given
+                        just how difficult it is to find historical evidence. Chapter six examines the history of two
+                        classic tropical epidemics, namely malaria and sleeping sickness. Lee thoroughly examines their
+                        resurgence and deadliness over time and space.
+
+                        The final chapter deals with occupational lung diseases: tuberculosis, silicosis and asbestosis
+                        in apartheid South Africa. These ailments were categorized into communicable (tuberculosis) and
+                        non-communicable diseases (silicosis and asbestosis). Lee’s examination of how these sicknesses
+                        were racialized in the apartheid era is particularly interesting.
+                    </p>
+                </div>
+                <div class="section Ázsiában">
+                    <h3 id="centered-heading">Ázsiai kórházak</h3>
+                    <p>In ancient Sri Lanka, according to the Mahavansa chronicle from the 6th century CE, King
+                        Pandukabhaya constructed hospitals and lying-in-homes after fortifying his capital in
+                        Anuradhapura during the 4th century BCE This provides the earliest literary evidence of
+                        hospitals, where patients could be housed and treated collectively. The oldest archaeological
+                        evidence of a hospital in Asia can be found in the ruins of Mihintale, dating back to the ninth
+                        century.[20] Scholars suggest that this may be one of the oldest hospitals in the world.[4][21]
+
+                        King Ashoka is wrongly said by many secondary sources to have founded hospitals ca. 230 BCE.[22]
+                        Early medical practices emerged early on in the Indian subcontinent with the practice of
+                        Ayurvedic medicine, one of the earliest texts for which survive being the Sushruta Samhita. Some
+                        early Buddhist communities established monastic communities with monasteries, and many of these
+                        monasteries were centers of learning for medicine. While sick monks within the monastic
+                        communities were usually treated in their own cells, some monasteries reserved a room where sick
+                        monks could be taken care of.[23] While some of these rooms in Buddhist monasteries may have
+                        been open to the public, the majority were closed off to the public and were reserved for
+                        treating other monks within the monastery.[24][25] This ideal is reflected in the story of the
+                        monk with dysentery.</p>
+                </div>
+                <div class="section  Londonban">
+                    <h3 id="centered-heading">Londoni kórházak</h3>
+                    <p >In Europe the medieval concept of Christian care evolved during the sixteenth and seventeenth
+                        centuries into a secular one.[93] Theology was the problem. The Protestant reformers rejected
+                        the Catholic belief that rich men could gain God's grace through good works – and escape
+                        purgatory – by providing endowments to charitable institutions, and that the patients themselves
+                        could gain grace through their suffering.[94]
+
+                        After the dissolution of the monasteries in 1540 by King Henry VIII the church abruptly ceased
+                        to be the supporter of hospitals, and only by direct petition from the citizens of London, were
+                        the hospitals St Bartholomew's, St Thomas's and St Mary of Bethlehem's (Bedlam) endowed directly
+                        by the crown.[95] It was at St. Bartholomew that William Harvey conducted his research on the
+                        circulatory system in the 17th century, Percivall Pott and John Abernethy developed important
+                        principles of modern surgery in the 18th century, and Mrs. Bedford Fenwich worked to advance the
+                        nursing profession in the late 19th century.</p>
+                    Meanwhile, in Catholic lands such as France and Italy, rich families continued to fund convents and
+                    monasteries that provided free health services to the poor. French practices were influenced by a
+                    charitable imperative which considered care of the poor and the sick to be a necessary part of
+                    Catholic practice. The nursing nuns had little faith in the power of physicians and their medicines
+                    alone to cure the sick; more important was providing psychological and physical comfort,
+                    nourishment, rest, cleanliness and especially prayer.
+                </div>
+                <div class="section  Kínában">
+                    <h3 id="centered-heading">Kínai kórházak</h3>
+                    <p>Traditionally, Chinese medicine relied on small private clinics and individual healers until the
+                        middle of the 18th century when missionary hospitals operated by western churches were first
+                        established in China. In 1870, the Tung Wah Hospital became the first hospital to offer
+                        Traditional Chinese Medicine. After the cultural revolution in 1949, most Chinese hospitals
+                        became public.</p>
+                </div>
+                <div class="section  Japánban">
+                    <h3 id="centered-heading">Japán kórházai</h3>
+                    <p>The history of Japanese hospitals is seen to have begun on the 8th century, and Japan’s first
+                        modern hospital—
+                        which continues to this day—was built in Nagasaki in 1860 by a Dutch naval surgeon, Pompe van
+                        Meerdervoort,
+                        as a clinical training hospital. However, at the beginning of the 18th century, there was a
+                        Yojosho (medical care
+                        facility) built in the nation’s capital, Edo, to provide medical care for the poor. This
+                        facility was built as the result
+                        of one citizen’s recommendation to the Bakufu feudal government.
+                        In Japan, with the exception of examples from ancient times when Buddhism was introduced, in the
+                        past
+                        hospitals were not built for religious reasons. In the second half of the 19th century, the
+                        number of hospitals in Japan
+                        being used as training grounds for Western medical education gradually grew due to the national
+                        government’s
+                        decision to control the practice of Chinese herbal medicine and focus instead on Western
+                        medicine. Initially the
+                        people admitted to these hospitals were wealthy townspeople, but as medical education became
+                        more organized,
+                        charity patients were also admitted and used for medical education and research.
+                        Other hospitals included civic hospitals, which were established in 1868. These hospitals
+                        received funding
+                        from the Emperor to provide treatment for the poor. In addition, isolation hospitals were
+                        established in response
+                        to the cholera outbreak that began in 1858. Syphilis hospitals, which conducted syphilis
+                        examinations for prostitutes and admitted those who were infected, began to increase in number
+                        from the second half of the 1800s.
+                        One characteristic of Japanese hospitals is that there are many private hospitals. Indicators of
+                        this trend can
+                        be observed in the 1870s.</p>
+                </div>
+                <div class="section  Közel-Keleten">
+                    <h3 id="centered-heading">Közel-Keleti kórházak</h3>
+                    <p>The Academy of Gondishapur was a hospital and medical training center at Gundeshapur in Persia.
+                The city of Gundeshapur was founded in 271 CE by the Sassanid king Shapur I. It was one of the major
+                cities in Khuzestan province of the Persian empire, in Iran. A large percentage of the population were
+                Syriacs, most of whom were Christians. Under the rule of Khusraw I, refuge was granted to Greek
+                Nestorian Christian philosophers including the scholars of the Persian School of Edessa (Urfa) (also
+                called the Academy of Athens), a Christian theological and medical university. These scholars made their
+                way to Gundeshapur in 529 following the closing of the academy by Emperor Justinian. They were engaged
+                in medical sciences and initiated the first translation projects of medical texts.[60] The arrival of
+                these medical practitioners from Edessa marks the beginning of the hospital and medical centre at
+                Gundeshapur.[33] It included a medical school and hospital (bimaristan), a pharmacology laboratory, a
+                translation house, a library and an observatory.[61] Indian doctors also contributed to the school at
+                Gundeshapur, most notably the medical researcher Mankah. Later after Islamic invasion, the writings of
+                Mankah and of the Indian doctor Susruta were translated into Arabic at Baghdad's House of Wisdom.
+                </p>
+                </div>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+
+</html>

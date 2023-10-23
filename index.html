@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<head>
+    <title>HIPOCRATES KLINIKA</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Alkalmazzuk az animációt a gombra */
+        .cn:hover {
+            animation: pulse 0.5s infinite;
+            /* A pulzálás végtelen lesz */
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.1);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .service a:hover {
+            animation: pulse 0.5s infinite;
+        }
+    </style>
+
+</head>
+<script src="script.js"></script>
+
+<body>
+    <div class="main">
+        <div class="navbar">
+            <div class="icon">
+                <h2 class="logo">HIPOCRATES <img src="Képek/logo14.png" alt=""></h2>
+            </div>
+            <div class="menu">
+                <ul>
+                    <li class="dropdown">
+                        <a href="#" class="menu-button">FŐOLDAL</a>
+                    </li>
+                    <li class="dropdown">
+                        <a href="HTML/Történetek.html" class="menu-button">TÖRTÉNETEK</a>
+                    </li>
+                    <li><a href="HTML/Orvosaink.html" class="menu-button">ORVOSAINK</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="menu-button">KÓRHÁZUNKRÓL</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Épületek</a></li>
+                            <li><a href="#">Állásajánlat</a></li>
+                            <li><a href="#">Menedzsment</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="dropdown">
+                        <a href="#" class="menu-button">KAPCSOLATOK</a>
+                        <ul class="dropdown-content">
+                            <li><a href="#">Írjon nekünk</a></li>
+                            <li><a href="#">Telefonszám</a></li>
+                            <li><a href="#">E-mail cím</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <div class="search">
+                <input class="srch" type="search" name="" placeholder=" Kereses"></a>
+                <a href="#"> <button class="btn">Keresés</button></a>
+            </div>
+        </div>
+
+        <div class="content">
+            <h1 class="auto-typing">SZAKRENDELÉSEK -<br><span>RENDELÉSI IDŐK -</span> <br>TELEFONSZÁMOK!</h1>
+            <p class="par auto-typing">A várakozási idők és a zsúfoltságok csökkentése érdekében <br> kérjük, hogy a
+                járóbeteg szakrendelésekre, az előjegyzett
+                <br> fekvőbeteg felvételekre az előre megbeszélt <br> időpontokban jelentkezzenek!<br>
+            </p>
+
+            <button class="cn"><a href="HTML/Időpontfoglalás.html">Időpontfoglalás</a></button>
+            <div class="form_s">
+                <h2>Bejelentkezés</h2>
+                <input type="email" id="email" name="email" placeholder="Email cím">
+                <input type="password" id="password" name="password" placeholder="Jelszó">
+                <button class="btnn" id="login-button">Belépés</button>
+
+                <p class="link">Nincs fiókja?<br>
+                    <a href="#">Regisztrálj</a> itt</a>
+                </p>
+                <p class="liw">Bejelentkezés vele</p>
+
+                <div class="icons">
+                    <a href="#"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-instagram"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-twitter"></ion-icon></a>
+                    <a href="#"><ion-icon name="logo-skype"></ion-icon></a>
+                </div>
+                    <div class="numbers">
+                        <h3>Betegellátásunkat elhivatott szakemberek és korszerű technológiák jellemzik!</h3>
+                        <table class="hirek_service">
+                            <tr>
+                                <td class="service">
+                                    <h2>Sürgősségi ellátás</h2>
+                                    <div class="leiras" data-id="surgossegi" onclick="enableEdit(this)">
+                                        Itt írd le a sürgősségi ellátás leírását vagy további információkat
+                                    </div>
+                                    <input class="searcher" type="search" id="surgossegiMezo" onblur="resetText(this)"
+                                        placeholder="Leírás itt:" oninput="updateText(this)">
+                                    <a href="javascript:void(0);" onclick="elkuld(this)">Elküld</a>
+                                </td>
+                                <td class="service">
+                                    <h2>Járóbeteg ellátás</h2>
+                                    <div class="leiras" data-id="jarobeteg" onclick="enableEdit(this)">
+                                        Itt írd le a járóbeteg ellátás leírását vagy további információkat
+                                    </div>
+                                    <input class="searcher" type="search" id="jarobetegMezo" onblur="resetText(this)"
+                                        placeholder="Leírás itt:" oninput="updateText(this)">
+                                    <a href="javascript:void(0);" onclick="elkuld(this)">Elküld</a>
+                                </td>
+                                <td class="service">
+                                    <h2>Fekvőbeteg ellátás</h2>
+                                    <div class="leiras" data-id="fevobeteg" onclick="enableEdit(this)">
+                                        Itt írd le a fekvőbeteg ellátás leírását vagy további információkat
+                                    </div>
+                                    <input class="searcher" type="search" id="fevobetegMezo" onblur="resetText(this)"
+                                        placeholder="Leírás itt:" oninput="updateText(this)">
+                                    <a href="javascript:void(0);" onclick="elkuld(this)">Elküld</a>
+                                </td>
+
+                                <td class="service">
+                                    <h2>Diagnosztika</h2>
+                                    <div class="leiras" data-id="diagnosztika" onclick="enableEdit(this)">
+                                        Itt írd le a diagnosztika leírását vagy további információkat
+                                    </div>
+                                    <input class="searcher" type="search" id="diagnosztikaMezo" onblur="resetText(this)"
+                                        placeholder="Leírás itt:" oninput="updateText(this)">
+                                    <a href="javascript:void(0);" onclick="elkuld(this)">Elküld</a>
+                                </td>
+
+
+                                <td class="service">
+                                    <h2>Alapellátás</h2>
+                                    <div class="leiras" data-id="alapellatas" onclick="enableEdit(this)">
+                                        Itt írd le az alapellátás leírását vagy további információkat
+                                    </div>
+                                    <input class="searcher" type="search" id="alapellatasMezo" onblur="resetText(this)"
+                                        placeholder="Leírás itt:" oninput="updateText(this)">
+                                    <a href="javascript:void(0);" onclick="elkuld(this)">Elküld</a>
+                                </td>
+
+                                <td class="service">
+                                    <h2>Covid19</h2>
+                                    <div class="leiras" data-id="covid19" onclick="enableEdit(this)">
+                                        Itt írd le a poszt-Covid ellátás leírását vagy további információkat
+                                    </div>
+                                    <input class="searcher" type="search" id="covid19Mezo" onblur="resetText(this)"
+                                        placeholder="Leírás itt:" oninput="updateText(this)">
+                                    <a href="javascript:void(0);" onclick="elkuld(this)">Elküld</a>
+                                </td>
+
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+            <script>
+                document.getElementById("login-button").addEventListener("click", function () {
+                    var emailInput = document.getElementById("email");
+                    var passwordInput = document.getElementById("password");
+
+                    if (emailInput.value === "" || passwordInput.value === "") {
+                        alert("Kérlek töltsd ki minden mezőt!");
+                    } else {
+                    }
+                });
+            </script>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>

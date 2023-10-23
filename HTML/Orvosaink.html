@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="../style.css">
+    <script src="../script.js"></script>
+    <title>ORVOSAINK</title>
+</head>
+
+<body>
+    <div class="doctor_b">
+        <a href="../index.html" class="orvos_back">Vissza</a>
+        <h1 class="cimsor1">Orvosok Nyilvántartása</h1>
+
+        <!-- Alap orvosok lista -->
+        <div id="alap-orvosok">
+            <h2 class="cimsor2">Orvosok Keresése</h2>
+            <ol>
+                <li>Dr. Robert Barlow</li>
+                <li>Kathrzn Anderson</li>
+                <li>Dr. Julie Hauge</li>
+                <li>Noel Cronk</li>
+                <li>Dr. Tanya Schaffer</li>
+                <li>Joseph Sale</li>
+                <li>Cortnez Thomzon</li>
+            </ol>
+        </div>
+    </div>
+    <h3 class="cimsor3">Orvosok hozzáadása</h3>
+    <!-- Űrlap az orvos adatainak hozzáadásához -->
+    <form id="#">
+        <input type="text" id="nev" placeholder="Név">
+        <input type="text" id="szakma" placeholder="Szakma">
+        <input type="number" id="eletkor" placeholder="Életkor">
+        <input type="text" id="elerhetoseg" placeholder="Elérhetőség">
+        <button type="button" id="hozzaadasGomb">Hozzáadás</button>
+    </form>
+
+    <!-- Kereső panel -->
+    <input type="text" id="kereso" placeholder="Keresés">
+    <button type="button" id="keresesGomb">Keresés</button>
+
+    <!-- Lista megjelenítésére szolgáló div -->
+    <div id="orvos-lista">
+        <!-- Itt jelennek meg a hozzáadott elemek dinamikusan -->
+    </div>
+
+    <script>
+        // Alap orvosok listája
+        alapOrvosok = [
+            { nev: "Dr. Robert Barlow" },
+            { nev: "Kathrzn Anderson" },
+            { nev: "Dr. Julie Hauge" },
+            { nev: "Noel Cronk" },
+            { nev: "Dr. Tanya Schaffer" },
+            { nev: "Joseph Sale" },
+            { nev: "Cortnez Thomzon" }
+        ];
+        const orvosok = [
+            { nev: "Dr. Robert Barlow", szakma: "Kardiológus", eletkor: 45, elerhetoseg: "orvos1@example.com" },
+            { nev: "Kathrzn Anderson", szakma: "Sebész", eletkor: 50, elerhetoseg: "orvos2@example.com" },
+            { nev: "Dr. Julie Hauge", szakma: "Belgyógyász", eletkor: 55, elerhetoseg: "orvos3@example.com" },
+            { nev: "Noel Cronk", szakma: "Fogorvos", eletkor: 40, elerhetoseg: "orvos4@example.com" },
+            { nev: "Dr. Tanya Schaffer", szakma: "Nőgyógyász", eletkor: 42, elerhetoseg: "orvos5@example.com" },
+            { nev: "Joseph Sale", szakma: "Tüdőgyógyász", eletkor: 25, elerhetoseg: "orvos1@example.com" },
+            { nev: "Cortnez Thomzon", szakma: "Kardiológus", eletkor: 38, elerhetoseg: "orvos1@example.com" },
+        ];
+        // Orvosok listája
+        const orvosLista = orvosok.map(orvos => orvos);
+
+        // Hozzáadás gomb eseménykezelője
+        // Hozzáadás gomb eseménykezelője
+        const hozzaadasGomb = document.getElementById("hozzaadasGomb");
+        hozzaadasGomb.addEventListener("click", function () {
+            const nev = document.getElementById("nev").value;
+            const szakma = document.getElementById("szakma").value;
+            const eletkor = document.getElementById("eletkor").value;
+            const elerhetoseg = document.getElementById("elerhetoseg").value;
+
+            // Ellenőrzés, hogy minden mező ki van-e töltve
+            if (!nev || !szakma || !eletkor || !elerhetoseg) {
+                alert("Kérlek töltsd ki az összes mezőt megfelelően.");
+
+                // Hibaosztályok hozzáadása a hiányzó mezőkhöz
+                if (!nev) {
+                    document.getElementById("nev").classList.add("error");
+                }
+                if (!szakma) {
+                    document.getElementById("szakma").classList.add("error");
+                }
+                if (!eletkor) {
+                    document.getElementById("eletkor").classList.add("error");
+                }
+                if (!elerhetoseg) {
+                    document.getElementById("elerhetoseg").classList.add("error");
+                }
+
+                return;
+            }
+
+            // Ellenőrzés, hogy a név ne tartalmazzon számot
+            if (/\d/.test(nev)) {
+                alert("Az orvos neve nem tartalmazhat számot!");
+
+                // Hibaosztály hozzáadása a névmezőhöz
+                document.getElementById("nev").classList.add("error");
+                return;
+            }
+
+            // Hibaosztály eltávolítása, ha nincs hiba
+            document.getElementById("nev").classList.remove("error");
+            document.getElementById("szakma").classList.remove("error");
+            document.getElementById("eletkor").classList.remove("error");
+            document.getElementById("elerhetoseg").classList.remove("error");
+
+            // Új orvos hozzáadása a listához
+            const ujOrvos = { nev, szakma, eletkor, elerhetoseg };
+            orvosLista.push(ujOrvos);
+
+            // Űrlap mezők ürítése
+            document.getElementById("nev").value = "";
+            document.getElementById("szakma").value = "";
+            document.getElementById("eletkor").value = "";
+            document.getElementById("elerhetoseg").value = "";
+
+            // Sikeres hozzáadás üzenet megjelenítése
+            const successAlert = document.createElement("div");
+            successAlert.classList.add("success-alert");
+            successAlert.textContent = "Sikeres adatbevitel!";
+            document.body.appendChild(successAlert);
+
+            // Időzített üzenet eltűntetése
+            setTimeout(function () {
+                document.body.removeChild(successAlert);
+            }, 2000); // 2000 milliszekundum (2 másodperc) múlva tűnik el
+        });
+
+        // Keresés gomb eseménykezelője
+        const keresesGomb = document.getElementById("keresesGomb");
+        keresesGomb.addEventListener("click", function () {
+            const keresettBetu = document.getElementById("kereso").value.charAt(0).toLowerCase();
+
+            if (!keresettBetu.match(/[a-záéíóöőúüű]/)) {
+                alert("Kérlek adj meg egy kezdőbetűt a kereséshez.");
+                return;
+            }
+
+            const talalatok = orvosLista.filter(function (orvos) {
+                // Ellenőrizd, hogy az orvos nevének kezdőbetűje megegyezik-e a keresett betűvel
+                return orvos.nev.toLowerCase().charAt(0) === keresettBetu;
+            });
+
+            // Ellenőrizd, hogy vannak-e találatok
+            if (talalatok.length === 0) {
+                alert("Nincs találat.");
+                return;
+            }
+
+            // Frissítsd az orvos listát a találatok alapján
+            const orvosListaElem = document.getElementById("orvos-lista");
+            orvosListaElem.innerHTML = ""; // Ürítsd ki a listát
+
+            talalatok.forEach(function (orvos) {
+                const orvosElem = document.createElement("div");
+                // Itt jelenítjük meg az összes adatot
+                orvosElem.innerHTML = `
+            Név: ${orvos.nev}, 
+            Szakma: ${orvos.szakma || "N/A"}, 
+            Életkor: ${orvos.eletkor || "N/A"}, 
+            Elérhetőség: ${orvos.elerhetoseg || "N/A"}`;
+                orvosListaElem.appendChild(orvosElem);
+            });
+        });
+
+        // Ellenőrzés a bejelentkezés gombra
+        document.getElementById("login-button").addEventListener("click", function () {
+            var emailInput = document.getElementById("email");
+            var passwordInput = document.getElementById("password");
+
+            if (emailInput.value === "" || passwordInput.value === "") {
+                alert("Kérlek töltsd ki minden mezőt!");
+            } else {
+                alert("Sikeres adatbevitel!");
+            }
+        })
+    </script>
+</body>
+
+</html>
